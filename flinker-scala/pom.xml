@@ -26,7 +26,7 @@ under the License.
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Flinkr Scala</name>
+	<name>Flinker Scala</name>
 	<url>https://www.vipmind.me</url>
 
 	<repositories>
