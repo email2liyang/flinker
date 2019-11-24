@@ -26,8 +26,8 @@ under the License.
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Flink Quickstart Job</name>
-	<url>http://www.myorganization.org</url>
+	<name>Flinkr Scala</name>
+	<url>https://www.vipmind.me</url>
 
 	<repositories>
 		<repository>
