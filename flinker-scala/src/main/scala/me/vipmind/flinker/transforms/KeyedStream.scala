@@ -1,7 +1,6 @@
 package me.vipmind.flinker.transforms
 
 import org.apache.flink.streaming.api.scala._
-
 object KeyedStream {
 
   def main(args: Array[String]): Unit = {
@@ -10,7 +9,8 @@ object KeyedStream {
       ("cn", List("Beijing")),
       ("au", List("Sydney")),
       ("cn", List("ShangHai")),
-      ("au", List("Perth")))
+      ("au", List("Perth")),
+      ("cn", List("Tianjin")))
     val resultStream = inputStream.keyBy(0).reduce((x, y) => (x._1, x._2 ::: y._2))
     resultStream.print
 
