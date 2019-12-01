@@ -19,12 +19,12 @@ object SplitStream {
       })
 
     val y2Stream = splitStream.select("y2")
-      .map(s => Student(s.name.toLowerCase, s.year, s.score))
+      .map(s => Student(s.name.toLowerCase, s.year, s.score)).setParallelism(2)
     val y3Stream = splitStream.select("y3")
-      .map(s => Student(s.name.toUpperCase, s.year, s.score))
+      .map(s => Student(s.name.toUpperCase, s.year, s.score)).setParallelism(3)
 
-    y2Stream.print()
-    y3Stream.print()
+    y2Stream.print().setParallelism(2)
+    y3Stream.print().setParallelism(1)
 
     env.execute("Split stream")
   }
