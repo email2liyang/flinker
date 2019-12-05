@@ -23,6 +23,7 @@ object SideOutputStream {
 
     year2StudentStream.print()
     year3StudentStream.print()
+    stream.print()
 
     env.execute()
   }
